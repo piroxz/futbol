@@ -3,6 +3,17 @@ package DatosFutbol;
 import java.util.Scanner;
 
 public class Tester {
+	
+	public static void altaJugadores(Jugador jugador1){
+		
+		System.out.println("INtruduzca el nunero de id del jugador");
+		//idJugador = lee.
+	}
+	
+	
+	
+	
+	
 
 	public static void main(String[] args)  {
 		Scanner lee = new Scanner(System.in);
@@ -18,12 +29,10 @@ public class Tester {
 		
 		Jugador listaJugador[] = new Jugador[2];
 		listaJugador[0] = new Jugador();
-		listaJugador[1] = new Jugador(50,"50");
+		listaJugador[1] = new Jugador(50 , " Daniel",10,10);
 		
-		
-		for (int i = 0; i < listaJugador.length; i++) {
-			listaJugador[i].imprimirPromedioGol();
-		}
+		Equipo Barcelona = new Equipo(1,"Barcelona",listaJugador);
+		Barcelona.imprimirDatosJugadores();
 		
 		
 		

@@ -57,7 +57,7 @@ package DatosFutbol;
 			/*idEquipo = 01;
 			partidosJugados = 20;
 			golesMetidos = 30;*/
-			return "Idjugador: "+ idJugador+"nombre: "+nombre;
+			return "Id jugador: "+ idJugador+" nombre: "+nombre+" partidos Jugados "+partidosJugados+" Goles Metidos "+golesMetidos;
  			
 		}
 		public void imprimirJugador(){

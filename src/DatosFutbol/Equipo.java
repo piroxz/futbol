@@ -4,7 +4,7 @@ public class Equipo {
 
 	protected int idEquipo;
 	protected String nombreEquipo;
-	protected int [] jugadores;
+	protected Jugador [] jugadores;
 	
 	
 	
@@ -15,7 +15,7 @@ public class Equipo {
 	//	jugadores [22] =  jugadores[0];
 		
 	}
-	public Equipo(int idEquipo,String nombreEquipo,int[] jugador){
+	public Equipo(int idEquipo,String nombreEquipo,Jugador[] jugador){
 		this.idEquipo = idEquipo;
 		this.nombreEquipo = nombreEquipo;
 		this.jugadores = jugador;
@@ -34,7 +34,7 @@ public class Equipo {
 	public String getnombreEquipo(){
 		return nombreEquipo;
 	}
-	public int[] getjugador(){
+	public Jugador[] getJugador(){
 		return jugadores;
 	}
 	
@@ -48,13 +48,13 @@ public class Equipo {
 	public void setnmombreEquipo(String nombreEquipo){
 		this.nombreEquipo = nombreEquipo;
 	}
-	public void setjugador (int[] jugador){
-		this.jugadores = jugador;
-	}
+	
 	public void imprimirDatosJugadores(){
-
+		System.out.println("Equipo: " + nombreEquipo);
 		for (int i = 0; i < jugadores.length; i++) {
-			jugadores[i]
+			jugadores[i].imprimirJugador();
+			jugadores[i].imprimirPromedioGol();
+			
 		}
 		
 		
