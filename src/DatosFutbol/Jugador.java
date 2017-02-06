@@ -4,8 +4,8 @@ package DatosFutbol;
 
 		protected int idJugador;
 		protected String nombre;
-		protected int partidosJugados;
-		protected int golesMetidos;
+		protected double partidosJugados;
+		protected double golesMetidos;
 		
 		public Jugador(){
 
@@ -17,7 +17,7 @@ package DatosFutbol;
 		}
 		
 
-		public Jugador(int idJugador,String nombre,int partidosJugados,int golesMetidos){
+		public Jugador(int idJugador,String nombre,double partidosJugados,double golesMetidos){
 			
 			this.idJugador = idJugador;
 			this.nombre = nombre;
@@ -35,19 +35,30 @@ package DatosFutbol;
 			nombre = nuevoNombre;
 		}
 		
-		public int promedioGoles(){
-			int mediaGoles = golesMetidos / partidosJugados;
+		public double promedioGoles(){
+			
+			double mediaGoles = 0;
+			if (partidosJugados!=0)
+					mediaGoles=golesMetidos / partidosJugados;
+			else 
+				mediaGoles =-1;
 			return mediaGoles;
 		}
 		
 		public void imprimirPromedioGol(){
-			System.out.println("el promedio de los goles "
+			imprimirJugador();
+			if (promedioGoles()==-1)
+				System.out.println("No ha jugado ningún partido");
+			else
+				System.out.println("el promedio de los goles "
 			+this.getClass().getSimpleName()+" es "+promedioGoles());
 		}
 		public String datosJugador(){
-			
-			Jugador.class.getName();
-			return datosJugador();
+			/*idEquipo = 01;
+			partidosJugados = 20;
+			golesMetidos = 30;*/
+			return "Idjugador: "+ idJugador+"nombre: "+nombre;
+ 			
 		}
 		public void imprimirJugador(){
 			System.out.println("Los datos del jugador son : "
@@ -61,10 +72,10 @@ package DatosFutbol;
 		public String nombre(){
 			return nombre;
 		}
-		public int partidosJugados(){
+		public double partidosJugados(){
 			return partidosJugados;
 		}
-		public int golesMetidos(){
+		public double golesMetidos(){
 			return golesMetidos;
 		}
 		
@@ -77,10 +88,10 @@ package DatosFutbol;
 		public void setnombre(String nombre){
 			this.nombre = nombre;
 		}
-		public void setpartidosJugados(int partidosJugados){
+		public void setpartidosJugados(double partidosJugados){
 			this.partidosJugados = partidosJugados;
 		}
-		public void setgolesMetidos(int golesMetidos){
+		public void setgolesMetidos(double golesMetidos){
 			this.golesMetidos = golesMetidos;
 		}
 		

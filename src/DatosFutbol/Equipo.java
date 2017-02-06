@@ -4,7 +4,7 @@ public class Equipo {
 
 	protected int idEquipo;
 	protected String nombreEquipo;
-	protected int [] jugador;
+	protected int [] jugadores;
 	
 	
 	
@@ -12,13 +12,13 @@ public class Equipo {
 	public Equipo(){
 		idEquipo = 01;
 		nombreEquipo = "Barcerlona";
-	//	jugador [22] =  jugador[0];
+	//	jugadores [22] =  jugadores[0];
 		
 	}
 	public Equipo(int idEquipo,String nombreEquipo,int[] jugador){
 		this.idEquipo = idEquipo;
 		this.nombreEquipo = nombreEquipo;
-		this.jugador = jugador;
+		this.jugadores = jugador;
 	}
 	public Equipo(int idEquipo,String nombreEquipo){
 		this.idEquipo = idEquipo;
@@ -35,7 +35,7 @@ public class Equipo {
 		return nombreEquipo;
 	}
 	public int[] getjugador(){
-		return jugador;
+		return jugadores;
 	}
 	
 	
@@ -49,8 +49,16 @@ public class Equipo {
 		this.nombreEquipo = nombreEquipo;
 	}
 	public void setjugador (int[] jugador){
-		this.jugador = jugador;
+		this.jugadores = jugador;
 	}
-	
+	public void imprimirDatosJugadores(){
+
+		for (int i = 0; i < jugadores.length; i++) {
+			jugadores[i]
+		}
+		
+		
+		
+	}
 	
 }

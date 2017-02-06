@@ -9,7 +9,7 @@ public class Tester {
 		
 		Jugador jugador1 = new Jugador();
 		
-		System.out.println(jugador1);
+		//System.out.println(jugador1);
 		
 		//System.out.println("introduzca el nombre del jugador ");
 	
@@ -22,8 +22,7 @@ public class Tester {
 		
 		
 		for (int i = 0; i < listaJugador.length; i++) {
-			listaJugador[i].golesMetidos();
-
+			listaJugador[i].imprimirPromedioGol();
 		}
 		
 		
