@@ -50,7 +50,7 @@ public class Equipo {
 	}
 	
 	public void imprimirDatosJugadores(){
-		System.out.println("Equipo: " + nombreEquipo);
+		System.out.println("Equipo: " + nombreEquipo +"\nID del equipo : "+idEquipo);
 		for (int i = 0; i < jugadores.length; i++) {
 			jugadores[i].imprimirJugador();
 			jugadores[i].imprimirPromedioGol();
