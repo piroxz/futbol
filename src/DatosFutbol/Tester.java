@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Tester {
 	
-	public static void altaJugadores(Jugador jugador1){
+	public static  Jugador nuevoJugador(){
 		
 		System.out.println("INtruduzca el nunero de id del jugador");
-		//idJugador = lee.
+		idJugador = lee.
 	}
 	
 	
